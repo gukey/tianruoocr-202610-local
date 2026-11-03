@@ -8,6 +8,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'tianruoocr-master/bin/x64/Release/net472'
 NAME = '天若OCR-Paddle单引擎版-1.4.1-win-x64'
+ARCHIVE_NAME = 'TianruoOCR-Paddle-1.4.1-win-x64.zip'
 
 
 def main():
@@ -30,7 +31,7 @@ def main():
     assert not any(p.name == 'my.Config' or p.name.startswith('OcrLiteLib') for p in files)
     manifest = {p.relative_to(destination).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
     (destination / 'SHA256.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
-    archive = dist / (NAME + '.zip')
+    archive = dist / ARCHIVE_NAME
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as output:
         for path in sorted(destination.rglob('*')):
             if path.is_file():

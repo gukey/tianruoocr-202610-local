@@ -4,6 +4,8 @@
 
 基于 [wangfreexx 的开源天若](https://github.com/wangfreexx/wangfreexx-tianruoocr-cl-paddle) 修改，遵循原项目 GPL-3.0 许可。本仓库保存天若桌面程序源码；PDF 转 Word 是独立验证项目。
 
+原始项目发布页：[wangfreexx/wangfreexx-tianruoocr-cl-paddle/releases](https://github.com/wangfreexx/wangfreexx-tianruoocr-cl-paddle/releases)。本仓库为基于该项目修改的 Paddle 单引擎版本。
+
 ## 下载与使用
 
 在 [发布页面](https://github.com/gukey/tianruoocr-202610-local/releases) 下载成品 ZIP，完整解压后运行 `天若OCR文字识别.exe`，不要直接在压缩包内运行。通过截图热键或主窗口识别，接口菜单只有“本地Paddle”。
