@@ -1,0 +1,11 @@
+<Project>
+  <!-- Emgu 4.5.5 ships VC++ 14.29 app-local files. They override a newer
+       installed VC++ runtime and crash ONNX Runtime 1.31 during OrtEnv creation.
+       Use the system VC++ 2015-2022 x64 redistributable instead. -->
+  <Target Name="RemoveLegacyAppLocalVCRuntime" AfterTargets="Build">
+    <ItemGroup>
+      <LegacyVCRuntime Include="$(TargetDir)msvcp140*.dll;$(TargetDir)vcruntime140*.dll;$(TargetDir)concrt140.dll" />
+    </ItemGroup>
+    <Delete Files="@(LegacyVCRuntime)" />
+  </Target>
+</Project>

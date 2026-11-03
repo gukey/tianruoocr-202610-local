@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrOCR", "TrOCR.csproj", "{B130A49B-6676-465D-BAD4-B83666DFFA44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcrLib", "..\OcrLib\OcrLib.csproj", "{AB10D356-2D95-4460-96CA-9A7129AD0A76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		RelWithDebInfo|Any CPU = RelWithDebInfo|Any CPU
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+		Steam|Any CPU = Steam|Any CPU
+		Steam|x64 = Steam|x64
+		WindowsStore|Any CPU = WindowsStore|Any CPU
+		WindowsStore|x64 = WindowsStore|x64
+		WindowsStoreDebug|Any CPU = WindowsStoreDebug|Any CPU
+		WindowsStoreDebug|x64 = WindowsStoreDebug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Debug|Any CPU.Build.0 = Debug|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Debug|x64.ActiveCfg = Debug|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Debug|x64.Build.0 = Debug|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Release|Any CPU.ActiveCfg = Release|x86
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Release|Any CPU.Build.0 = Release|x86
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Release|x64.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Release|x64.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.RelWithDebInfo|Any CPU.ActiveCfg = Release|x86
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.RelWithDebInfo|Any CPU.Build.0 = Release|x86
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Steam|Any CPU.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Steam|Any CPU.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Steam|x64.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.Steam|x64.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStore|Any CPU.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStore|Any CPU.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStore|x64.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStore|x64.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStoreDebug|Any CPU.ActiveCfg = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStoreDebug|Any CPU.Build.0 = Release|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStoreDebug|x64.ActiveCfg = Debug|x64
+		{B130A49B-6676-465D-BAD4-B83666DFFA44}.WindowsStoreDebug|x64.Build.0 = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Debug|x64.ActiveCfg = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Debug|x64.Build.0 = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Release|x64.ActiveCfg = Release|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Release|x64.Build.0 = Release|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.RelWithDebInfo|Any CPU.ActiveCfg = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.RelWithDebInfo|Any CPU.Build.0 = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Steam|Any CPU.ActiveCfg = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Steam|Any CPU.Build.0 = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Steam|x64.ActiveCfg = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.Steam|x64.Build.0 = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStore|Any CPU.ActiveCfg = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStore|Any CPU.Build.0 = Release|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStore|x64.ActiveCfg = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStore|x64.Build.0 = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStoreDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStoreDebug|Any CPU.Build.0 = Debug|Any CPU
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStoreDebug|x64.ActiveCfg = Debug|x64
+		{AB10D356-2D95-4460-96CA-9A7129AD0A76}.WindowsStoreDebug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D78471A-2E8B-4745-9404-B8AFFC757936}
+	EndGlobalSection
+EndGlobal
