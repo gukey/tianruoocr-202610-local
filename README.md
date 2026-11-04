@@ -1,6 +1,6 @@
 # tianruoocr-202610-local
 
-天若 OCR 本地版 **1.4.1**：统一使用 Paddle 引擎，升级至 PP-OCRv6 small 检测与识别模型、ONNX Runtime 1.31.1，移除 CL 引擎及其菜单、设置和模型。
+天若 OCR 本地版 **1.4.2**：统一使用 Paddle 引擎，升级至 PP-OCRv6 small 检测与识别模型、ONNX Runtime 1.31.1，移除 CL 引擎及其菜单、设置和模型。当前精简版还移除旧 Paddle 备用模型、视频解码插件及未使用的依赖；详见 [精简说明](docs/发布说明-1.4.2.md)。
 
 基于 [wangfreexx 的开源天若](https://github.com/wangfreexx/wangfreexx-tianruoocr-cl-paddle) 修改，遵循原项目 GPL-3.0 许可。本仓库保存天若桌面程序源码；PDF 转 Word 是独立验证项目。
 
@@ -33,9 +33,9 @@ dotnet build tianruoocr-master/TrOCR.sln -c Release -p:Platform=x64
 
 ```powershell
 dotnet build tests/OcrSmoke/OcrSmoke.csproj -c Release -p:Platform=x64
-./tests/OcrSmoke/bin/x64/Release/net472/OcrSmoke.exe tianruoocr-master/models/paddle-ocr-v6 tianruoocr-master/models/paddle-ocr
+./tests/OcrSmoke/bin/x64/Release/net472/OcrSmoke.exe tianruoocr-master/models/paddle-ocr-v6
 dotnet build tests/PaddleOnlyUiSmoke/PaddleOnlyUiSmoke.csproj -c Release -p:Platform=x64
 ./tests/PaddleOnlyUiSmoke/bin/x64/Release/net472/PaddleOnlyUiSmoke.exe
 ```
 
-测试覆盖实际 OCR、新旧模型、空白和倒置文字、资源释放、CL 配置迁移，以及 Paddle 设置保存和重载。合成样本回归不能代表真实文档准确率。
+测试覆盖实际 OCR、空白和倒置文字、资源释放、CL 配置迁移，以及 Paddle 设置保存和重载。合成样本回归不能代表真实文档准确率。

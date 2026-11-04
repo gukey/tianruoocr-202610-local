@@ -78,6 +78,19 @@ internal static class Program
             document.Load(config);
             Require(document.SelectSingleNode("//OCR") == null, "Fresh configuration still creates CL settings");
             Require(!typeof(FmMain).Assembly.GetReferencedAssemblies().Any(a => a.Name == "OcrLiteLib"), "CL assembly is still referenced");
+            Require(HanToPinyin.GetFullPinyin("天若").Length > 0, "Embedded pinyin dictionary is unavailable");
+            using (var code = new ZXing.BarcodeWriter
+            {
+                Format = ZXing.BarcodeFormat.QR_CODE,
+                Options = new ZXing.Common.EncodingOptions { Width = 240, Height = 240, Margin = 4 }
+            }.Write("Paddle slim 123456"))
+            {
+                var decoded = new ZXing.BarcodeReader().Decode(code);
+                Require(decoded != null && decoded.Text == "Paddle slim 123456", "QR code round trip failed");
+            }
+            string sound = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "screenshot.wav");
+            using (var player = new System.Media.SoundPlayer(sound)) player.Load();
+            Console.WriteLine("PASS: embedded pinyin, QR encode/decode, default screenshot sound");
             Console.WriteLine("PASS: CL config migration, Paddle-only menu, main-form OCR, settings read/save/reload, no CL fields or assembly reference");
             return 0;
         }

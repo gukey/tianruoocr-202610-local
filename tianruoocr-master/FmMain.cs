@@ -2653,56 +2653,12 @@ namespace TrOCR
             //MessageBox.Show("ok");
                         {
                 string appPath = AppDomain.CurrentDomain.BaseDirectory;
-                string modelsDir = appPath + "models" + "\\" + "paddle-ocr";
-                string clsPath = modelsDir + "\\" + "cls_infer.onnx";
-                value27 = IniHelper.GetValue("paddle模型", "模型");
-                string detPath;
-                string recPath;
-                string keysPath;
-                if (value27 == "发生错误" || !int.TryParse(value27, out valuetemp))
-                {
-                    detPath = modelsDir + "\\" + "det_infer.onnx";
-                    recPath = modelsDir + "\\" + "rec_infer.onnx";
-                    keysPath = modelsDir + "\\" + "ppocr_keys.txt";
-                }
-                else
-                {
-                    switch (valuetemp)
-                    {
-                        case 1:
-                            detPath = modelsDir + "\\" + "det_infer.onnx";
-                            recPath = modelsDir + "\\" + "rec_infer.onnx";
-                            keysPath = modelsDir + "\\" + "ppocr_keys.txt";
-                            break;
-                        case 2:
-                            detPath = modelsDir + "\\" + "det_infer.onnx";
-                            recPath = modelsDir + "\\" + "en_number_mobile_v2.0_rec_infer.onnx";
-                            keysPath = modelsDir + "\\" + "en_dict.txt";
-                            break;
-                        case 3:
-                            detPath = modelsDir + "\\" + "det_infer.onnx";
-                            recPath = modelsDir + "\\" + "japan_rec_crnn.onnx";
-                            keysPath = modelsDir + "\\" + "japan_dict.txt";
-                            break;
-                        default:
-                            detPath = modelsDir + "\\" + "det_infer.onnx";
-                            recPath = modelsDir + "\\" + "rec_infer.onnx";
-                            keysPath = modelsDir + "\\" + "ppocr_keys.txt";
-                            break;
-                    }
-                }
-
-                string modernDir = Path.Combine(appPath, "models", "paddle-ocr-v6");
-                if (File.Exists(Path.Combine(modernDir, "det_infer.onnx")) &&
-                    File.Exists(Path.Combine(modernDir, "rec_infer.onnx")) &&
-                    File.Exists(Path.Combine(modernDir, "ppocr_keys.txt")) &&
-                    File.Exists(Path.Combine(modernDir, "cls_infer.onnx")))
-                {
-                    clsPath = Path.Combine(modernDir, "cls_infer.onnx");
-                    detPath = Path.Combine(modernDir, "det_infer.onnx");
-                    recPath = Path.Combine(modernDir, "rec_infer.onnx");
-                    keysPath = Path.Combine(modernDir, "ppocr_keys.txt");
-                }
+                // 精简版只加载这一套模型，不再附带旧模型或语言专用备用模型。
+                string modelsDir = Path.Combine(appPath, "models", "paddle-ocr-v6");
+                string clsPath = Path.Combine(modelsDir, "cls_infer.onnx");
+                string detPath = Path.Combine(modelsDir, "det_infer.onnx");
+                string recPath = Path.Combine(modelsDir, "rec_infer.onnx");
+                string keysPath = Path.Combine(modelsDir, "ppocr_keys.txt");
 
                 bool isDetExists = File.Exists(detPath);
                 bool isClsExists = File.Exists(clsPath);

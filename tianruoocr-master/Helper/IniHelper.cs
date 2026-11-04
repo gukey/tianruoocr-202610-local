@@ -4,8 +4,6 @@ using System.Collections.Specialized;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using System.Text;
-using IniParser;
-using IniParser.Model;
 using System.Windows.Forms;
 using System.Xml;
 

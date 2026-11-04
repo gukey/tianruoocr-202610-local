@@ -278,7 +278,6 @@
     <None Include="Resources\Fontstyle.Image.png" />
     <None Include="Resources\61e74233ly1ffnkzr87tbj20p00q0dt4.jpg" />
     <None Include="Resources\Image1.bmp" />
-    <Content Include="DLL\pinyin.txt"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OcrLib\OcrLib.csproj">
@@ -296,12 +295,6 @@
     </PackageReference>
     <PackageReference Include="Emgu.CV.runtime.windows">
       <Version>4.5.5.4823</Version>
-    </PackageReference>
-    <PackageReference Include="Emgu.CV.UI">
-      <Version>4.5.5.4823</Version>
-    </PackageReference>
-    <PackageReference Include="ini-parser">
-      <Version>2.5.2</Version>
     </PackageReference>
     <PackageReference Include="TencentCloudSDK.Tmt">
       <Version>3.0.644</Version>

@@ -8,4 +8,11 @@
     </ItemGroup>
     <Delete Files="@(LegacyVCRuntime)" />
   </Target>
+  <!-- 这些组件不在截图识别调用链中，重建时同时清除旧输出残留。 -->
+  <Target Name="RemoveUnusedScreenshotRuntimeFiles" AfterTargets="Build">
+    <ItemGroup>
+      <UnusedScreenshotRuntime Include="$(TargetDir)opencv_videoio_ffmpeg455_64.dll;$(TargetDir)INIFileParser.dll;$(TargetDir)Emgu.CV.Platform.NetFramework.dll;$(TargetDir)System.Diagnostics.DiagnosticSource.dll;$(TargetDir)System.Text.Encodings.Web.dll;$(TargetDir)zxing.presentation.dll;$(TargetDir)DLL/pinyin.txt;$(TargetDir)models/paddle-ocr/*.onnx;$(TargetDir)models/paddle-ocr/*.txt" />
+    </ItemGroup>
+    <Delete Files="@(UnusedScreenshotRuntime)" />
+  </Target>
 </Project>
